@@ -5,6 +5,7 @@ date: "2024-11-14"
 output: github_document
 ---
 
+## Question 1
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -49,7 +50,7 @@ ggplot(prob, aes(x = n, y = prob)) +
 
 ```
 
-##Question 2
+## Question 2
 ```{r}
 set.seed(123)
 
@@ -110,6 +111,7 @@ estimates_plot <- ggplot(summary_stats, aes(x = true_mu)) +
   )
 estimates_plot
 ```
+
 ### 1. Small Effect Sizes (μ ≈ 0-2)
 * The yellow line (rejected samples) lies **above** the true value line (dashed y=x)
 * This indicates an upward bias in the estimates when only considering significant results
@@ -124,7 +126,7 @@ estimates_plot
     + More tests reject the null hypothesis
     + Less selection bias as we're not just selecting extr
 
-##Question 3
+## Question 3
 ```{r}
 suicide <- read_csv("homicide-data.csv")
 suicide <- 
